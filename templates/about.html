@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for number in list_of_numbers %}
-        <p>{{ number }}</p>
-    {% endfor %}
+
 
     <h2>{{ page_title }}</h2>
     <p>
@@ -16,222 +14,24 @@
         to leave on other business, welcomed a fourteenth to fill into their party.
     </p>
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Thorin Oakenshield</h3>
-            <p>
-                Thorin II was born in TA 2746 to Dwarf prince Thráin II in the city of the Lonely Mountain. Early in his
-                youth, he and the other Dwarves of the Lonely Mountain were forced to flee by the dragon Smaug in TA
-                2770. While in exile, he quickly grew to become a capable warrior. This was demonstrated when he
-                participated in the Battle of Azanulbizar in TA 2799. He fought with one of the Dwarven armies beneath
-                the East-gate of Moria. At some point in the fighting, his shield broke, and using an oaken tree branch
-                found on the ground as a shield, he gained the epithet "Oakenshield," which would remain with him even
-                in death.
-            </p>
-        </div>
-       
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/3/3f/ThorinBIG.jpg" alt="">
-        </div> 
-    </div>
+    {% for member in company %}
 
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-            </div>
+        <div class="row featurette">
             <div class="col-md-7">
-            <h3>Fili and Kili</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother, Dís. They were also
-                nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing
-                feature was his long nose, the longest of any of the Dwarves in Thorin's company.[2]
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Oin</h3>
-            <p>
-                Óin was the older brother of Glóin, cousin of Dwalin and Balin, and uncle of Gimli. Óin's uncle was
-                Fundin, the father of Balin and Dwalin.
-            </p>
-        </div>
-
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg" alt="">
-
-        </div>
-    </div>
-       
-
-    <div class="row featurette">
-
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/f/fc/Gloin_2.jpg" alt="">
-
-        </div>
-
-        <div class="col-md-7">
-            <p>
-                Glóin, son of Gróin was one of the Dwarves of Thorin II Oakenshield's company who set out to reclaim the
-                Lonely Mountain in the Quest of Erebor. He was also the father of Gimli, who became a member of the
-                Fellowship of the Ring.
-            </p>
-        </div>
-
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
+                <h3>{{ member.name }}</h3>
+                <p>{{ member.description }}</p>
             </div>
-            <div class="col-md-7">
-            <h3>Gloin</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother, Dís. They were also
-                nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing
-                feature was his long nose, the longest of any of the Dwarves in Thorin's company.[2]
-            </p>
+        
+            <div class="col-md-5">
+                <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive">
+            </div> 
         </div>
-    </div>
 
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-            </div>
-            <div class="col-md-7">
-            <h3>Balin</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother, Dís. They were also
-                nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing
-                feature was his long nose, the longest of any of the Dwarves in Thorin's company.[2]
-            </p>
-        </div>
-    </div>
+        <hr class="featurette-divider">
 
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-            </div>
-            <div class="col-md-7">
-            <h3>Dwalin</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother, Dís. They were also
-                nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing
-                feature was his long nose, the longest of any of the Dwarves in Thorin's company.[2]
-            </p>
-        </div>
-    </div>
+        
+        
 
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-            </div>
-            <div class="col-md-7">
-            <h3>Ori</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother, Dís. They were also
-                nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing
-                feature was his long nose, the longest of any of the Dwarves in Thorin's company.[2]
-            </p>
-        </div>
-    </div>
-
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-            </div>
-            <div class="col-md-7">
-            <h3>Dori</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother, Dís. They were also
-                nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing
-                feature was his long nose, the longest of any of the Dwarves in Thorin's company.[2]
-            </p>
-        </div>
-    </div>
-
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-            </div>
-            <div class="col-md-7">
-            <h3>Nori</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother, Dís. They were also
-                nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing
-                feature was his long nose, the longest of any of the Dwarves in Thorin's company.[2]
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-            </div>
-            <div class="col-md-7">
-            <h3>Bilfur</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother, Dís. They were also
-                nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing
-                feature was his long nose, the longest of any of the Dwarves in Thorin's company.[2]
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-            </div>
-            <div class="col-md-7">
-            <h3>Bofur</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother, Dís. They were also
-                nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing
-                feature was his long nose, the longest of any of the Dwarves in Thorin's company.[2]
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-            </div>
-            <div class="col-md-7">
-            <h3>Bombur</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother, Dís. They were also
-                nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing
-                feature was his long nose, the longest of any of the Dwarves in Thorin's company.[2]
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-            </div>
-            <div class="col-md-7">
-            <h3>Gandalf</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother, Dís. They were also
-                nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing
-                feature was his long nose, the longest of any of the Dwarves in Thorin's company.[2]
-            </p>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
+    {% endfor %}
 
     {% endblock %}
